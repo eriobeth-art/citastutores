@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123e70">
+  <title>Agenda de Citas a Tutores · EPOANT</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;background:#f4f7fb}
+    body{font-family:Arial,Helvetica,sans-serif}
+    iframe{width:100%;height:100%;border:0;display:block;background:#f4f7fb}
+  </style>
+</head>
+<body>
+  <iframe
+    id="agenda"
+    title="Agenda de Citas a Tutores EPOANT"
+    src="https://script.google.com/macros/s/AKfycbzb_j0ZSYwCvtFdf_WvIolyZzPWZwUszpn1FzVvvQPzvrW8a5cNImdF_bReQWYCxFq0/exec">
+  </iframe>
+
+  <script>
+    (function(){
+      const base = "https://script.google.com/macros/s/AKfycbzb_j0ZSYwCvtFdf_WvIolyZzPWZwUszpn1FzVvvQPzvrW8a5cNImdF_bReQWYCxFq0/exec";
+      const params = new URLSearchParams(window.location.search);
+      const target = new URL(base);
+      params.forEach((value,key) => target.searchParams.set(key,value));
+      document.getElementById("agenda").src = target.toString();
+    })();
+  </script>
+</body>
+</html>
